@@ -12,8 +12,8 @@ void createaleak() {
 int main() {
   printf("*****************\nWelcome to DSA!\n*****************\n");
 
-  // how to import and call a function
-  printf("Factorial of 4 is %d\n", fact(4));
+  
+  run_program();
 
   // uncomment and run "make v" to see how valgrind detects memory leaks
   // createaleak();
