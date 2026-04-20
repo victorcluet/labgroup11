@@ -280,7 +280,6 @@ int collect_valid_numbers(HouseList *list, const char *street_name,
   return count;
 }
 
-
 void init_place_list(PlaceList *list) {
   list->head = NULL;
   list->count = 0;
@@ -358,7 +357,8 @@ Place *find_exact_place(PlaceList *list, const char *name) {
   return NULL;
 }
 
-/* now using the Levensthein distance we try to find the most similar string to the given by the user */
+/* now using the Levensthein distance we try to find the most similar string to
+ * the given by the user */
 
 static int normalized_street_in_list(StreetSuggestion arr[], int count,
                                      const char *street_name) {
@@ -380,8 +380,7 @@ static int normalized_street_in_list(StreetSuggestion arr[], int count,
 }
 
 int collect_similar_streets(HouseList *list, const char *input,
-                            char suggestions[][MAX_NAME],
-                            int max_suggestions) {
+                            char suggestions[][MAX_NAME], int max_suggestions) {
   StreetSuggestion all[1000];
   House *current = list->head;
   char norm_input[MAX_INPUT];

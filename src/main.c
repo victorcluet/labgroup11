@@ -12,7 +12,6 @@ void createaleak() {
 int main() {
   printf("*****************\nWelcome to DSA!\n*****************\n");
 
-  
   run_program();
 
   // uncomment and run "make v" to see how valgrind detects memory leaks

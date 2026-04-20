@@ -175,7 +175,6 @@ void test_free_house_list_resets_list() {
   successtest();
 }
 
-
 void test_init_place_list() {
   PlaceList list;
 
