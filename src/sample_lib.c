@@ -143,9 +143,7 @@ static int levenshtein(const char *s1, const char *s2) {
   return v0[len2];
 }
 
-/* =========================
-   HOUSES LINKED LIST
-   ========================= */
+/* we use houses and places linked lists as it is required and it is easier*/
 
 void init_house_list(HouseList *list) {
   list->head = NULL;
@@ -282,9 +280,6 @@ int collect_valid_numbers(HouseList *list, const char *street_name,
   return count;
 }
 
-/* =========================
-   PLACES LINKED LIST
-   ========================= */
 
 void init_place_list(PlaceList *list) {
   list->head = NULL;
@@ -363,9 +358,7 @@ Place *find_exact_place(PlaceList *list, const char *name) {
   return NULL;
 }
 
-/* =========================
-   SIMILAR STREETS
-   ========================= */
+/* now using the Levensthein distance we try to find the most similar string to the given by the user */
 
 static int normalized_street_in_list(StreetSuggestion arr[], int count,
                                      const char *street_name) {
@@ -436,9 +429,7 @@ int collect_similar_streets(HouseList *list, const char *input,
   return count;
 }
 
-/* =========================
-   FILE LOADING
-   ========================= */
+/* here we do all the file loading that we will need*/
 
 static int load_houses_from_file(HouseList *list, const char *map_name) {
   char path[256];
@@ -516,9 +507,7 @@ static int load_places_from_file(PlaceList *list, const char *map_name) {
   return 1;
 }
 
-/* =========================
-   MAP VALIDATION
-   ========================= */
+/* we also do a map validation*/
 
 int is_valid_map_name(const char *name) {
   const char *valid[] = {"xs_1", "xs_2", "md_1", "lg_1", "xl_1", "2xl_1"};
@@ -533,9 +522,7 @@ int is_valid_map_name(const char *name) {
   return 0;
 }
 
-/* =========================
-   MAIN PROGRAM
-   ========================= */
+/* and here comes the main program */
 
 void run_program(void) {
   HouseList houses;

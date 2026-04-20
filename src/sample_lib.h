@@ -32,7 +32,6 @@ typedef struct {
 int is_valid_map_name(const char *name);
 void run_program(void);
 
-/* Houses */
 void init_house_list(HouseList *list);
 int append_house(HouseList *list, const char *street_name, int number,
                  double lat, double lon);
@@ -43,7 +42,6 @@ int collect_valid_numbers(HouseList *list, const char *street_name,
                           int numbers[], int max_numbers);
 
 
-                          /* Places */
 void init_place_list(PlaceList *list);
 int append_place(PlaceList *list, const char *name, double lat, double lon);
 void free_place_list(PlaceList *list);
